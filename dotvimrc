@@ -1,0 +1,37 @@
+set nocompatible
+
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ajh17/VimCompletesMe'
+Plugin 'altercation/vim-colors-solarized'
+
+
+call vundle#end()
+filetype plugin indent on
+
+syntax on
+set number
+set mouse=a
+set background=dark
+colorscheme solarized
+
+set cursorline
+highlight CursorLine guibg=#073642 ctermbg=0
+
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+
+set wildmenu
+set wildmode=full
+set path+=**
+
+set omnifunc=syntaxcomplete#Complete
+let b:vcm_tab_complete = 'omni'
+let g:airline#extensions#tabline#enabled = 1
+set noshowmode
+
+set clipboard=unnamedplus
