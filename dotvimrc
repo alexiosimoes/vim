@@ -16,12 +16,14 @@ filetype plugin indent on
 
 syntax on
 set number
+set relativenumber
 set mouse=a
 set background=dark
 colorscheme solarized
 
 set cursorline
 highlight CursorLine guibg=#073642 ctermbg=0
+set wrap
 
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
@@ -35,3 +37,4 @@ let g:airline#extensions#tabline#enabled = 1
 set noshowmode
 
 set clipboard=unnamedplus
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
